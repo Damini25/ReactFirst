@@ -1,20 +1,13 @@
 import React from 'react';
 
-class PrivateRouteComponent extends React.Component {
-    render() {
-        return (
-            <div className="parent-div">
-                <div>
-                    <label>Email</label>
-                    <input />
-                </div>
-                <div>
-                    <label>Password</label>
-                    <input />
-                </div>
-               <div><button>Login</button></div> 
-            </div>
-        );
-    }
+const PrivateRouteComponent = ({ component: Component, ...rest }) => {
+    return <Route {...rest} render={(props) => {
+        true ? <Component {...props} /> : <Redirect to={{
+            pathName: '/login', state: {
+                from: props.location
+            }
+        }} />
+    }} />
 }
+
 export default PrivateRouteComponent;
