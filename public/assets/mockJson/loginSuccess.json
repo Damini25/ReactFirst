@@ -1,0 +1,10 @@
+{
+    "data":{
+        "auth":true,
+        "token":"xyz",
+        "userName":"Damini",
+        "member":true
+    },
+    "success":true,
+    "error":null
+}

@@ -19,14 +19,15 @@ class LoginHome extends React.Component {
     render() {
         if (this.state['auth']) {
             if (this.state['member']) {
-                this.props.history.push('/member');
+             return   this.props.history.push('/member');
             } else {
-                this.props.history.push('/admin');
+                return   this.props.history.push('/admin');
             }
         } else {
             return this.props.history.push('/login');
         }
     }
+    
 }
 
 export default LoginHome;

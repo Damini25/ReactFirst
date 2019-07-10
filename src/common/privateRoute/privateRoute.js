@@ -1,9 +1,12 @@
 import React from 'react';
+import { Route, Switch, Redirect, BrowserRouter as Router } from 'react-router-dom';
 
 const PrivateRouteComponent = ({ component: Component, ...rest }) => {
-    <Route {...rest} render={
+    console.log('privateRoute1 rest', rest);
+    return <Route {...rest} render={
         (props) => {
-            true ? <Component /> : <Redirect
+            console.log('privateRoute2 props', props);
+           return true ? <Component {...props} /> : <Redirect
                 to={{
                     pathname: '/login',
                     state: { from: props.location }
@@ -12,44 +15,6 @@ const PrivateRouteComponent = ({ component: Component, ...rest }) => {
             ></Redirect>
         }
     }></Route >
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const PrivateRouteComponent = ({ component: Component, ...rest }) => {
-//     return <Route {...rest} render={(props) => {
-//         true ? <Component {...props} /> : <Redirect to={{
-//             pathName: '/login', state: {
-//                 from: props.location
-//             }
-//         }} />
-//     }} />
-// }
-
 export default PrivateRouteComponent;
