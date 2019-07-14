@@ -1,0 +1,12 @@
+.filter-div section{
+    display: flex;
+    /* border: 1px solid #332b2b0d; */
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+.filter-div section div{
+    margin-right: 10px;
+    border: 1px solid #cec1bd;
+    border-radius: 50%;
+    padding: 4px;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductDetails from './productList/productDetails';
 import { fetchProducts } from './productsService';
+import SizeFilter from './filter/sizeFilter/sizeFilter';
 import './products.css';
 
 class MainProductListing extends React.Component {
@@ -29,14 +30,15 @@ class MainProductListing extends React.Component {
         console.log('fffff', this.state.productData);
         const product = this.state.productData.map((element) => {
             return <div key={element.id}>
-                    <ProductDetails productData={element}></ProductDetails>
-                    
-                </div>
+                <ProductDetails productData={element}></ProductDetails>
 
-            
+            </div>
+
+
         })
         return (
             <div className="products_list_main">
+                <div><SizeFilter></SizeFilter></div> 
                 {product}
             </div>
         );
