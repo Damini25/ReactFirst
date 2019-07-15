@@ -8,7 +8,7 @@ class SizeFilter extends React.Component{
              <div className="filter-div">
                  <label>Sizes</label>
                  <section>
-                     <div onClick={filterData}>XS</div>
+                     <div>XS</div>
                      <div>S</div>
                      <div>M</div>
                      <div>L</div>
