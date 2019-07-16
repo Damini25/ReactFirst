@@ -2,16 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import Login from './login/login'
-// import SignUP from './signup/signup'
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import * as serviceWorker from './serviceWorker';
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+import rootReducers from './common/Reducers/mainReducer';
+
+const store = createStore(rootReducers);
 
 const routes = (<Router>
     <div>
-        <Route path="/" component={App}></Route>
-        {/* <Route path="/login" component={Login}></Route>
+        <Provider store={store}>
+            <Route path="/" component={App}></Route>
+            {/* <Route path="/login" component={Login}></Route>
         <Route path="/signup" component={SignUP}></Route> */}
+        </Provider>
+
     </div>
 </Router>);
 
