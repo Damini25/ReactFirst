@@ -15,4 +15,7 @@ const rootReducer = (state = initialState, action) => {
     }
 }
 
+const mapStateToProps =(state)=>{
+
+}
 export default rootReducer;
