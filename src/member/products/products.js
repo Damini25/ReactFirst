@@ -2,6 +2,7 @@ import React from 'react';
 import ProductDetails from './productList/productDetails';
 import { fetchProducts } from './productsService';
 import SizeFilter from './filter/sizeFilter/sizeFilter';
+import CartComponent from './cart/cart';
 import './products.css';
 
 class MainProductListing extends React.Component {
@@ -39,6 +40,7 @@ class MainProductListing extends React.Component {
         return (
             <div className="products_list_main">
                 <div><SizeFilter></SizeFilter></div> 
+                <div><CartComponent></CartComponent></div>
                 {product}
             </div>
         );

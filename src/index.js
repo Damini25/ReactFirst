@@ -3,12 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore,combineReducers } from 'redux';
 import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
-import rootReducers from './common/Reducers/mainReducer';
+import CartReducer from './common/store/Reducers/cartReducer';
+import FilterReducer from './common/store/Reducers/filterReducer';
 
+const rootReducers=combineReducers({
+    cartReducer :CartReducer,
+    filterReducer:FilterReducer
+})
 const store = createStore(rootReducers);
+
+store.subscribe(()=>{
+    console.log('getState' ,store.getState());
+})
 
 const routes = (<Router>
     <div>
