@@ -3,7 +3,7 @@ import { Route, Switch, Redirect, BrowserRouter as Router } from 'react-router-d
 
 const PrivateRouteComponent = ({ component: Component, ...rest }) => {
   //  console.log('privateRoute1 rest', rest);
-    return <Route {...rest} render={
+    return <Route {...rest} exact strict render={
         (props) => {
             console.log('privateRoute2 props', props);
            return true ? <Component {...props} /> : <Redirect

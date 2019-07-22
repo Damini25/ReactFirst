@@ -1,0 +1,18 @@
+.products_list_main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.filter-block{
+    width: 20%;
+}
+.list-product{
+    width: 80%;
+}
+.go-to-cartbtn{
+    float: right;
+    /* background-color: #f3a415; */
+    border: none;
+    /* width: 74px; */
+    margin-right: 7px;
+    height: 20px;
+}

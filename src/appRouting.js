@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import Login from './login/login';
 import LoginHome from './loginhome/loginhome';
 import Signup from './signup/signup';
@@ -7,21 +7,33 @@ import AdminRouting from './admin/adminRouting';
 import MemberRouting from './member/memberRouting';
 import Notfound from './common/notFoundComponent/notfound';
 import PrivateRoute from './common/privateRoute/privateRoute.js';
-import CartComponent from './member/products/cart/cart';
+import CartComponent from './member/products/container/cart/cart';
+import {Link,NavLink} from 'react-router-dom';
 const AppRoutes = () => {
-    return <Router>
+    return <BrowserRouter>
+        <div>
+            <header>Welcome Damini
+                <nav>
+                    <ul>
+                        <li>
+                            <NavLink  to={{pathname:"/signup"}}>Sign Up</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={{ pathname: "/member" }}>Home</NavLink>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
         <Switch>
             <Route path="/" exact strict component={LoginHome} ></Route>
-            <Route path="/login" exact strict component={Login} ></Route>
+            <Route path="/login" exact component={Login} ></Route>
             <Route path="/signup" exact strict component={Signup}></Route>
-            <PrivateRoute path="/member" exact strict component={MemberRouting}></PrivateRoute>
-            <PrivateRoute path="/admin" exact strict component={AdminRouting}></PrivateRoute>
-            <PrivateRoute path="/cart" exact strict component={CartComponent}></PrivateRoute>
-            {/* <Route path="/member" exact strict component={MemberRouting}></Route>
-            <Route path="/admin" exact strict component={AdminRouting}></Route> */}
+            <PrivateRoute  strict path="/member" component={MemberRouting}></PrivateRoute>
+            <PrivateRoute path="/admin" component={AdminRouting}></PrivateRoute>
             <Route component={Notfound}></Route>
         </Switch>
-    </Router>
+    </BrowserRouter>
 }
 /*class App extends React.Component {
     render() {

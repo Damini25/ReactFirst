@@ -1,4 +1,4 @@
-.products_list_main{
+.products_list{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
