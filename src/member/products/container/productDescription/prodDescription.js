@@ -1,6 +1,6 @@
 import React from 'react';
 import { fetchProductByID } from '../../productsService';
-import * as actionTypes from '../../../../common/store/actions';
+import * as actionTypes from '../../../../common/store/actions/actions';
 import { connect } from 'react-redux';
 
 class ProductDescription extends React.Component {
@@ -12,6 +12,7 @@ class ProductDescription extends React.Component {
     }
 
     componentDidMount() {
+        console.log('proddescr',this.props);
         this.getProductById();
     }
 

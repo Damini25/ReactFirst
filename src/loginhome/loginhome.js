@@ -1,4 +1,5 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom';
 
 class LoginHome extends React.Component {
     constructor(props) {
@@ -17,15 +18,20 @@ class LoginHome extends React.Component {
     }
 
     render() {
+        let redirect=null;
         if (this.state['auth']) {
             if (this.state['member']) {
-             return   this.props.history.push('/member');
+            // return   this.props.history.push('/member');
+            redirect=<Redirect to="/member"></Redirect>
             } else {
-                return   this.props.history.push('/admin');
+                redirect=<Redirect to="/admin"></Redirect>
+               // return   this.props.history.push('/admin');
             }
         } else {
-            return this.props.history.push('/login');
+            redirect=<Redirect to="/login"></Redirect>
+           // return this.props.history.push('/login');
         }
+        return redirect;
     }
     
 }

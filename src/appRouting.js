@@ -19,7 +19,7 @@ const AppRoutes = () => {
                             <NavLink  to={{pathname:"/signup"}}>Sign Up</NavLink>
                         </li>
                         <li>
-                            <NavLink to={{ pathname: "/member" }}>Home</NavLink>
+                            <NavLink to={{ pathname: "/" }}>Home</NavLink>
                         </li>
                     </ul>
                 </nav>

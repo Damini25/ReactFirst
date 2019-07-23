@@ -1,8 +1,8 @@
 import React from 'react';
 import './productDetails.css';
 import { connect } from 'react-redux';
-import { addItemtoCart, removeItemFromCart } from '../../../../common/store/actions';
-import * as actionTypes from '../../../../common/store/actions';
+import { addItemtoCart, removeItemFromCart } from '../../../../common/store/actions/actions';
+import * as actionTypes from '../../../../common/store/actions/actions';
 
 class ProductDetails extends React.Component {
     

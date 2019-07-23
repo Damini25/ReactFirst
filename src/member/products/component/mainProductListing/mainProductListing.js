@@ -3,7 +3,7 @@ import SizeFilter from '../../container/filter/sizeFilter/sizeFilter';
 import CartComponent from '../../container/cart/cart';
 import ProductListing from '../../container/products';
 import './mainProductListing.css';
-import { Link } from 'react-router-dom';
+import { Link,Redirect } from 'react-router-dom';
 
 class MainProductListing extends React.Component {
 
