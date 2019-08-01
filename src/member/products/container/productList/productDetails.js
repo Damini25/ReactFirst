@@ -2,7 +2,7 @@ import React from 'react';
 import './productDetails.css';
 import { connect } from 'react-redux';
 import { addItemtoCart, removeItemFromCart } from '../../../../common/store/actions/actions';
-import * as actionTypes from '../../../../common/store/actions/actions';
+import * as actionTypes from '../../../../common/store/actions/actionIndex';
 
 class ProductDetails extends React.Component {
     
@@ -20,7 +20,7 @@ class ProductDetails extends React.Component {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        onAddingItemToCart: (item) => dispatch({ type: actionTypes.Add_Item_ToCart, itemToBeAdded: item })
+        onAddingItemToCart: (item) => dispatch(actionTypes.AddToCart(item))
     }
 };
 export default connect(null, mapDispatchToProps)(ProductDetails);

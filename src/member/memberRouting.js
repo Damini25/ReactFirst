@@ -6,6 +6,7 @@ import MainProductListing from './products/component/mainProductListing/mainProd
 //import ProductDescription from './products/container/productDescription/prodDescription';
 import PrivateRoute from '../common/privateRoute/privateRoute';
 import AsynchComponent from '../common/hoc/asynchComponent';
+import HookAppComponent from './hooks/hookApp';
 
 const AsynchCartComponent = AsynchComponent(() => {
     return import('./products/container/cart/cart');
@@ -29,6 +30,8 @@ class MemberRouting extends React.Component {
                             <Suspense fallback={<div>Loading...</div>}><AsynchProductDescriptionComponent {...this.props}/></Suspense>
                         }></Route>
                     <PrivateRoute path={this.props.match.url + "/cart"} exact strict component={AsynchCartComponent}></PrivateRoute>
+                    <PrivateRoute path={this.props.match.url + "/todo"} exact strict component={HookAppComponent}></PrivateRoute>
+
                     <Redirect from="/" to="/member"></Redirect>
                 </Switch>
             </React.Fragment>

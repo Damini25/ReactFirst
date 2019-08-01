@@ -1,6 +1,6 @@
 import React from 'react';
 import { fetchProductByID } from '../../productsService';
-import * as actionTypes from '../../../../common/store/actions/actions';
+import * as actionTypes from '../../../../common/store/actions/actionIndex';
 import { connect } from 'react-redux';
 
 class ProductDescription extends React.Component {
@@ -43,7 +43,7 @@ class ProductDescription extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onAddingItemToCart: (item) => dispatch({ type: actionTypes.Add_Item_ToCart, itemToBeAdded: item })
+        onAddingItemToCart: (item) => dispatch(actionTypes.AddToCart(item))
     }
 }
 export default connect(null,mapDispatchToProps)(ProductDescription);

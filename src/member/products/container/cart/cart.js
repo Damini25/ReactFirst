@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actionTypes from '../../../../common/store/actions/actions';
+import * as actionTypes from '../../../../common/store/actions/actionIndex';
 
 class CartComponent extends React.Component {
 
@@ -32,9 +32,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
     return {
-        onRemovingItemFromCart: (id) => dispatch({
-            type: actionTypes.Remove_Item_FromCart, id: id
-        })
+        onRemovingItemFromCart: (id) => dispatch(actionTypes.RemoveFromCart(id))
     }
 };
 export default connect(mapStateToProps, mapDispatchToProps)(CartComponent);;
