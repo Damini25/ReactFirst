@@ -6,7 +6,7 @@ const PrivateRouteComponent = ({ component: Component, ...rest }) => {
     return <Route {...rest} exact strict render={
         (props) => {
             console.log('privateRoute2 props', props);
-           return true ? <Component {...props} /> : <Redirect
+           return false ? <Component {...props} /> : <Redirect
                 to={{
                     pathname: '/login',
                     state: { from: props.location }
