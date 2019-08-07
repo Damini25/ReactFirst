@@ -1,0 +1,124 @@
+.parent-div{
+    display:flex;
+    flex-direction: row;
+    border:2px solid black;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+/* trader info css starts*/
+.parent-div .trader-info-div{
+    border:1px solid red;
+    min-width: 30%;
+}
+
+.trader-info-div h3{
+    background-color: #BCD6EE;
+    font-weight: 500;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+
+.trader-info-div div{
+    display: flex;
+}
+
+.trader-info-div div label{
+   font-weight: 500;
+}
+
+/* --------book trade --new order css starts------------ */
+.parent-div .book-trade-div{
+    border:1px solid greenyellow;
+    min-width: 30%;
+}
+
+.book-trade-div h3{
+    background-color: #BCD6EE;
+    font-weight: 500;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+
+.book-trade-div .sub-div{
+    width: 90%;
+    margin: 5%;
+}
+.book-trade-div .sub-div div{
+    display: flex;
+    justify-content: center;
+}
+.sub-div label{
+    margin-right: 20%;
+}
+
+.sub-div button{
+    width: 30%;
+    background-color: white;
+    border: 1px solid black;
+    font-weight: 600;
+    margin-top: 3%;
+    padding: 1%;
+}
+/**news-feed-div starts**/
+.parent-div .news-feed-div{
+    border:1px solid green;
+    min-width: 30%;
+}
+.news-feed-div h3{
+    background-color: #BCD6EE;
+    font-weight: 500;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+.news-feed-div div{
+    display: flex;
+    flex-direction: column;
+}
+
+.news-feed-div li{
+    margin: 0 0 1% 0;
+    color: #0563C1;
+    text-decoration: underline;
+}
+.news-feed-div ul,.news-feed-div a{
+    color: #0563C1;
+    text-align:left;
+    margin-bottom: 2%;
+}
+
+/**book-trader-div starts*/
+.parent-div .trader-div{
+    border:1px solid green;
+    min-width: 30%;
+}
+
+.trader-div h3{
+    background-color: #BCD6EE;
+    font-weight: 500;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+
+.trader-div .sub-div{
+    display:flex;
+}
+
+.trader-div .sub-div div{
+    width: 50%;
+    border: 1px solid black;
+}
+
+.trader-div .sub-div h3{
+  background-color: white;
+}
+
+.trader-div .sub-div table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+.trader-div .sub-div table thead {
+    background-color: #bab7b6;
+    margin: 0;
+}

@@ -9,6 +9,8 @@ import Notfound from './common/notFoundComponent/notfound';
 import PrivateRoute from './common/privateRoute/privateRoute.js';
 import CartComponent from './member/products/container/cart/cart';
 import {Link,NavLink} from 'react-router-dom';
+import OrderEntry from './uniper/orderEntry/orderEntryComponent';
+
 const AppRoutes = () => {
     return <BrowserRouter>
         <div>
@@ -28,6 +30,7 @@ const AppRoutes = () => {
         <Switch>
             <Route path="/" exact strict component={LoginHome} ></Route>
             <Route path="/login" exact component={Login} ></Route>
+            <Route path="/orderEntry" exact component={OrderEntry} ></Route>
             <Route path="/signup" exact strict component={Signup}></Route>
             <PrivateRoute  strict path="/member" component={MemberRouting}></PrivateRoute>
             <PrivateRoute path="/admin" component={AdminRouting}></PrivateRoute>
