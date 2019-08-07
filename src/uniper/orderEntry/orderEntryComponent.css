@@ -122,3 +122,30 @@
     background-color: #bab7b6;
     margin: 0;
 }
+
+/**security-chart--div starts*/
+.parent-div .security-chart-div{
+    border:1px solid blue;
+    min-width: 30%;
+}
+.security-chart-div h3{
+    background-color: #BCD6EE;
+    font-weight: 500;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+
+/**pl-chart--div starts*/
+.parent-div .pl-chart-div{
+    border:1px solid blue;
+    min-width: 30%;
+}
+.pl-chart-div h3{
+    background-color: #BCD6EE;
+    font-weight: 500;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+.pl-chart-div canvas{
+background-color: black;
+}
